@@ -57,7 +57,7 @@ switch ($sort) {
 }
 
 // Define the query:
-$q = "SELECT last_name, first_name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr, user_id FROM users ORDER BY $order_by LIMIT $start, $display";
+$q = "SELECT last_name, first_name, customer_id AS dr FROM customers";
 $r = @mysqli_query($dbc, $q); // Run the query.
 
 // Table header:

@@ -2,7 +2,7 @@
 // This script performs an INSERT query to add a record to the users table.
 
 $page_title = 'Feedback';
-include('../includes/header.html');
+include('includes/header.html');
 
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		} else { // If it did not run OK.
 
 			// Public message:
-			echo '<h1>System Error</h1>
+			echo '<h1>Thank you?</h1>
 			<p class="error">Your feedback sank! We apologize for any inconvenience.</p>';
 
 			// Debugging message:
@@ -93,4 +93,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<p>Feedback: <input type="textarea" name="feedb" value="<?php if (isset($_POST['feedb'])) echo $_POST['feedb']; ?>" ></p>
 	<p><input type="submit" name="submit" value="Feedback"></p>
 </form>
-<?php include('../includes/footer.html'); ?>
+<?php include('includes/footer.html'); ?>
